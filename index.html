@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnWithNaa | Learn and Grow</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7ff;
+      color: #222;
+    }
+
+    header {
+      background: #1746a2;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #103579;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 8px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 35px 15px;
+      background: white;
+    }
+
+    .hero h2 {
+      color: #1746a2;
+      font-size: 27px;
+    }
+
+    .hero p {
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ffb703;
+      color: #222;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .container {
+      padding: 25px 15px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #1746a2;
+    }
+
+    .search {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      margin: 15px 0 25px;
+      font-size: 16px;
+    }
+
+    .subjects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px 12px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 10px #00000010;
+    }
+
+    .card h3 {
+      color: #1746a2;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .resources {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 25px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #103579;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>📚 LearnWithNaa</h1>
+    <p>Your Learning Journey Starts Here!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#subjects">Subjects</a>
+    <a href="#resources">Resources</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Learn Smarter, Achieve More!</h2>
+    <p>
+      Welcome to LearnWithNaa, your friendly learning platform.
+      Discover study notes, practise questions, revise for exams
+      and build your confidence one lesson at a time.
+    </p>
+    <a href="#subjects" class="button">Explore Subjects</a>
+  </section>
+
+  <section class="container" id="subjects">
+    <h2>Explore Our Subjects</h2>
+
+    <input
+      class="search"
+      id="subjectSearch"
+      type="text"
+      placeholder="Search for a subject..."
+      oninput="searchSubjects()"
+    >
+
+    <div class="subjects" id="subjectList">
+
+      <div class="card">
+        <h3>📖 English</h3>
+        <p>Grammar, essays, comprehension and summary.</p>
+      </div>
+
+      <div class="card">
+        <h3>➗ Mathematics</h3>
+        <p>Worked examples, formulas and practice questions.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔬 Science</h3>
+        <p>Explore scientific concepts and experiments.</p>
+      </div>
+
+      <div class="card">
+        <h3>📚 Literature</h3>
+        <p>Study novels, plays, poems and literary devices.</p>
+      </div>
+
+      <div class="card">
+        <h3>💻 ICT</h3>
+        <p>Learn computing, networking and digital skills.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌍 Social Studies</h3>
+        <p>Understand society, citizenship and the environment.</p>
+      </div>
+
+      <div class="card">
+        <h3>📈 Economics</h3>
+        <p>Learn about markets, money and the economy.</p>
+      </div>
+
+    </div>
+
+    <div class="resources" id="resources">
+      <h2>📌 Learning Resources</h2>
+      <p>✅ Study notes and explanations</p>
+      <p>✅ Revision questions</p>
+      <p>✅ Examination preparation</p>
+      <p>✅ Learning tips for students</p>
+      <p>New learning materials will be added as the website grows.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 LearnWithNaa</p>
+    <p>Learn Today. Succeed Tomorrow!</p>
+  </footer>
+
+  <script>
+    function searchSubjects() {
+      const input = document.getElementById("subjectSearch");
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll("#subjectList .card");
+
+      cards.forEach(function(card) {
+        card.style.display =
+          card.textContent.toLowerCase().includes(filter)
+          ? ""
+          : "none";
+      });
+    }
+  </script>
+
+</body>
+  </html>￼Enter
